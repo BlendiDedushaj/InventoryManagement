@@ -2,6 +2,7 @@
 
 namespace InventoryManagement.Models
 {
+    public enum ScortOrder { Ascending=0, Descending=1 }
     public class Unit
     {
         public int Id { get; set; }

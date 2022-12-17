@@ -1,6 +1,7 @@
 ﻿using InventoryManagement.Data;
 using InventoryManagement.Interfaces;
 using InventoryManagement.Models;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -39,9 +40,26 @@ namespace InventoryManagement.Repositories
             return unit;
         }
 
-        public List<Unit> GetItems() 
+        public List<Unit> GetItems(string SortProperty, SortOrder sortOrder) 
         {
             List<Unit> units = _context.Units.ToList();
+
+            if (SortProperty.ToLower() == "name")
+            {
+                if (sortOrder == SortOrder.Ascending)
+                    units = units.OrderBy(n => n.Name).ToList();
+                else 
+                    units = units.OrderByDescending(n => n.Name).ToList();
+            }
+            else
+            {
+
+                if (sortOrder == SortOrder.Ascending)
+                    units = units.OrderBy(d => d.Description).ToList();
+                else
+                    units = units.OrderByDescending(d => d.Description).ToList();
+            }
+
             return units;
         }
 

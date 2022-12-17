@@ -9,15 +9,55 @@ using Microsoft.EntityFrameworkCore;
 using InventoryManagement.Data;
 using InventoryManagement.Interfaces;
 using InventoryManagement.Repositories;
+using Microsoft.Data.SqlClient;
 
 namespace InventoryManagement.Controllers
 {
 
     public class UnitController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(string sortExpression="")                //read method of the crud operation
         {
-            List<Unit> units = _unitRepo.GetItems();//_context.Units.ToList();
+            ViewData["SortParamName"] = "name";
+            ViewData["SortParamDesc"] = "description";
+
+            ViewData["SortIconName"] = "";
+            ViewData["SortIconDesc"] = "";
+
+            SortOrder sortOrder;
+            string sortproperty;
+
+            switch (sortExpression.ToLower())
+            {
+                case "name_desc":
+                    sortOrder = SortOrder.Descending;
+                    sortproperty = "name";
+                    ViewData["SortParamName"] = "name";
+                    ViewData["SortIconName"] = "fa fa-arrow-up";
+                    break;
+
+                case "description":
+                    sortOrder = SortOrder.Ascending;
+                    sortproperty = "description";
+                    ViewData["SortParamDesc"] = "description_desc";
+                    ViewData["SortIconDesc"] = "fa fa-arrow-down";
+                    break;
+
+                case "description_desc":
+                    sortOrder = SortOrder.Descending;
+                    sortproperty = "description";
+                    ViewData["SortParamDesc"] = "description";
+                    ViewData["SortIconDesc"] = "fa fa-arrow-up";
+                    break;
+                default:
+                    sortOrder = SortOrder.Ascending;
+                    sortproperty = "name";
+                    ViewData["SortIconName"]="fa fa-arrow-down";
+                    ViewData["SortParamName"] = "name_desc";
+                    break;
+            }
+
+            List<Unit> units = _unitRepo.GetItems(sortproperty,sortOrder);//_context.Units.ToList();
             return View(units);
         }
 
