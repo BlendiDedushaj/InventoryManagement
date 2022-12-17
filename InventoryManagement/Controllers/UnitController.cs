@@ -7,141 +7,100 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using InventoryManagement.Data;
+using InventoryManagement.Interfaces;
+using InventoryManagement.Repositories;
 
 namespace InventoryManagement.Controllers
 {
 
     public class UnitController : Controller
     {
-        private readonly InventoryContext _context;
-
-        public UnitController(InventoryContext context)
+        public IActionResult Index()
         {
-            _context = context;
+            List<Unit> units = _unitRepo.GetItems();//_context.Units.ToList();
+            return View(units);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Index()
+
+        private readonly IUnit _unitRepo;
+
+
+        public UnitController(IUnit unitrepo)
         {
-            return View(await _context.Units.ToListAsync());
+            _unitRepo = unitrepo;
         }
 
-        public async Task<IActionResult> Details(int? id)
+        public IActionResult Details(int id)
         {
-            if (id == null || _context.Units == null)
-            {
-                return NotFound();
-            }
-
-            var unit = await _context.Units
-                .FirstOrDefaultAsync(u => u.Id == id);
-            if (unit == null)
-            {
-                return NotFound();
-            }
-
+            Unit unit = _unitRepo.GetUnit(id);
             return View(unit);
         }
+
 
         public IActionResult Create()
         {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description")] Unit unit)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(unit);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(unit);
-        }
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Units == null)
-            {
-                return NotFound();
-            }
-
-            var unit= await _context.Units.FindAsync(id);
-            if (unit == null)
-            {
-                return NotFound();
-            }
+            Unit unit = new Unit();
             return View(unit);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description")] Unit unit)
+        public IActionResult Create( Unit unit)
         {
-            if (id != unit.Id)
+            try
             {
-                return NotFound();
+                unit = _unitRepo.Create(unit);
             }
-
-            if (ModelState.IsValid)
+            catch
             {
-                try
-                {
-                    _context.Update(unit);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UnitExists(unit.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(unit);
-        }
 
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Units == null)
-            {
-                return NotFound();
             }
-
-            var unit = await _context.Units
-                .FirstOrDefaultAsync(u => u.Id == id);
-            if (unit == null)
-            {
-                return NotFound();
-            }
-
-            return View(unit);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Units == null)
-            {
-                return Problem("Entity set 'InventoryContext.Units'  is null.");
-            }
-            var unit = await _context.Units.FindAsync(id);
-            if (unit != null)
-            {
-                _context.Units.Remove(unit);
-            }
-
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool UnitExists(int id)
+
+
+        public IActionResult Edit(int id)
         {
-            return _context.Units.Any(e => e.Id == id);
+            Unit unit = _unitRepo.GetUnit(id);
+            return View(unit);
         }
+
+        [HttpPost]
+        public IActionResult Edit(Unit unit)
+        {
+          try
+                {
+                 unit = _unitRepo.Edit(unit);
+                }
+                catch
+                {
+
+                }
+                return RedirectToAction(nameof(Index));
+         
+        }
+
+        public IActionResult Delete(int id)
+        {
+            Unit unit = _unitRepo.GetUnit(id);
+            return View(unit);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Unit unit)
+        {
+            try
+            {
+                unit = _unitRepo.Delete(unit);
+            }
+            catch
+            {
+
+            }
+            return RedirectToAction(nameof(Index));
+
+        }
+
+
     }
 }
