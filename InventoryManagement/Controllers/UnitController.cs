@@ -10,6 +10,7 @@ using InventoryManagement.Data;
 using InventoryManagement.Interfaces;
 using InventoryManagement.Repositories;
 using Microsoft.Data.SqlClient;
+using SortOrder = InventoryManagement.Models.SortOrder;
 
 namespace InventoryManagement.Controllers
 {
