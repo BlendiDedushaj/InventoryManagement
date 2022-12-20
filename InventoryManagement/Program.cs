@@ -11,6 +11,7 @@ builder.Services.AddDbContext<InventoryContext>(options =>
 // Add services to the container.
 
 builder.Services.AddScoped<IUnit, UnitRepository>();
+builder.Services.AddScoped<IBrand, BrandRepo>();
 
 builder.Services.AddDbContext<InventoryContext>(options => options.UseSqlServer(builder.Configuration.GetSection("ConnectionStrings:dbconn").Value));
 

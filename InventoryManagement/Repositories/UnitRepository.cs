@@ -5,6 +5,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using SortOrder = InventoryManagement.Models.SortOrder;
 
 namespace InventoryManagement.Repositories
 {

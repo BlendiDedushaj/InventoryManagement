@@ -1,6 +1,7 @@
 ﻿using InventoryManagement.Models;
 using Microsoft.Data.SqlClient;
 using System.Collections.Generic;
+using SortOrder = InventoryManagement.Models.SortOrder;
 
 namespace InventoryManagement.Interfaces
 {
