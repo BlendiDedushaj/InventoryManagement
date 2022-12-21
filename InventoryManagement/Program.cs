@@ -11,6 +11,7 @@ builder.Services.AddDbContext<InventoryContext>(options =>
 // Add services to the container.
 
 builder.Services.AddScoped<IUnit, UnitRepository>();
+builder.Services.AddScoped<ISupplier, SupplierRepo>();
 builder.Services.AddScoped<IBrand, BrandRepo>();
 builder.Services.AddScoped<ICategory, CategoryRepo>();
 

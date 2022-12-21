@@ -12,5 +12,8 @@ namespace InventoryManagement.Data
         public virtual DbSet<Brand> Brands { get; set; }
 
         public virtual DbSet<Category> Categories { get; set; }
+
+        public virtual DbSet<Supplier> Suppliers { get; set; }
+
     }
 }

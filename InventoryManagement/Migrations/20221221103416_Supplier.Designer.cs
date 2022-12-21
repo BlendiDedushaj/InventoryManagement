@@ -3,6 +3,7 @@ using InventoryManagement.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InventoryManagement.Migrations
 {
     [DbContext(typeof(InventoryContext))]
-    partial class InventoryContextModelSnapshot : ModelSnapshot
+    [Migration("20221221103416_Supplier")]
+    partial class Supplier
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,11 +46,7 @@ namespace InventoryManagement.Migrations
                     b.ToTable("Brands");
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("InventoryManagement.Models.Category", b =>
-=======
             modelBuilder.Entity("InventoryManagement.Models.Supplier", b =>
->>>>>>> 5123a6caecce2108f06053c4ec7f3e23bc4d504e
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -56,9 +54,6 @@ namespace InventoryManagement.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-<<<<<<< HEAD
-                    b.Property<string>("Description")
-=======
                     b.Property<string>("Address")
                         .IsRequired()
                         .HasMaxLength(75)
@@ -70,21 +65,12 @@ namespace InventoryManagement.Migrations
                         .HasColumnType("nvarchar(6)");
 
                     b.Property<string>("EmailId")
->>>>>>> 5123a6caecce2108f06053c4ec7f3e23bc4d504e
                         .IsRequired()
                         .HasMaxLength(75)
                         .HasColumnType("nvarchar(75)");
 
                     b.Property<string>("Name")
                         .IsRequired()
-<<<<<<< HEAD
-                        .HasMaxLength(25)
-                        .HasColumnType("nvarchar(25)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Categories");
-=======
                         .HasMaxLength(75)
                         .HasColumnType("nvarchar(75)");
 
@@ -96,7 +82,6 @@ namespace InventoryManagement.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Suppliers");
->>>>>>> 5123a6caecce2108f06053c4ec7f3e23bc4d504e
                 });
 
             modelBuilder.Entity("InventoryManagement.Models.Unit", b =>

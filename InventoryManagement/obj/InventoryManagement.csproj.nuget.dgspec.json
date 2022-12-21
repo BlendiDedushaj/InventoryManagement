@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\user2\\Desktop\\uni\\vuejs\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj": {}
   },
   "projects": {
@@ -12,9 +13,29 @@
         "projectPath": "C:\\Users\\user2\\Desktop\\uni\\vuejs\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
         "packagesPath": "C:\\Users\\user2\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\user2\\Desktop\\uni\\vuejs\\InventoryManagement\\InventoryManagement\\obj\\",
+=======
+    "C:\\Users\\HP\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\HP\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
+        "projectName": "InventoryManagement",
+        "projectPath": "C:\\Users\\HP\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\InventoryManagement\\InventoryManagement\\obj\\",
+>>>>>>> 5123a6caecce2108f06053c4ec7f3e23bc4d504e
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\user2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 5123a6caecce2108f06053c4ec7f3e23bc4d504e
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
