@@ -12,6 +12,7 @@ builder.Services.AddDbContext<InventoryContext>(options =>
 
 builder.Services.AddScoped<IUnit, UnitRepository>();
 builder.Services.AddScoped<IBrand, BrandRepo>();
+builder.Services.AddScoped<ICategory, CategoryRepo>();
 
 builder.Services.AddDbContext<InventoryContext>(options => options.UseSqlServer(builder.Configuration.GetSection("ConnectionStrings:dbconn").Value));
 
