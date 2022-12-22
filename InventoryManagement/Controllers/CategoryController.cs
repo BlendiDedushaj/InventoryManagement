@@ -1,9 +1,11 @@
 ﻿using InventoryManagement.Interfaces;
 using InventoryManagement.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace InventoryManagement.Controllers
 {
+    [Authorize]
     public class CategoryController : Controller
     {
         private readonly ICategory _Repo;

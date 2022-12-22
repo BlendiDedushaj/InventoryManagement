@@ -9,10 +9,11 @@ using InventoryManagement.Data;
 using InventoryManagement.Models;
 using InventoryManagement.Interfaces;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Authorization;
 
 namespace InventoryManagement.Controllers
 {
-   
+    [Authorize]
     public class SupplierController : Controller
     {
 

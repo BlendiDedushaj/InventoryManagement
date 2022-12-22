@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\ShoppingCart.png",
+      "PackagePath": "staticwebassets\\images\\ShoppingCart.png"
+    },
+    {
       "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

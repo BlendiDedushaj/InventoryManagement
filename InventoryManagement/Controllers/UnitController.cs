@@ -1,80 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using InventoryManagement.Interfaces;
 using InventoryManagement.Models;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using InventoryManagement.Data;
-using InventoryManagement.Interfaces;
-using InventoryManagement.Repositories;
-using Microsoft.Data.SqlClient;
-using SortOrder = InventoryManagement.Models.SortOrder;
 
 namespace InventoryManagement.Controllers
 {
-
+    [Authorize]
     public class UnitController : Controller
     {
-        public IActionResult Index(string sortExpression="")                //read method of the crud operation
-        {
-            ViewData["SortParamName"] = "name";
-            ViewData["SortParamDesc"] = "description";
-
-            ViewData["SortIconName"] = "";
-            ViewData["SortIconDesc"] = "";
-
-            SortOrder sortOrder;
-            string sortproperty;
-
-            switch (sortExpression.ToLower())
-            {
-                case "name_desc":
-                    sortOrder = SortOrder.Descending;
-                    sortproperty = "name";
-                    ViewData["SortParamName"] = "name";
-                    ViewData["SortIconName"] = "fa fa-arrow-up";
-                    break;
-
-                case "description":
-                    sortOrder = SortOrder.Ascending;
-                    sortproperty = "description";
-                    ViewData["SortParamDesc"] = "description_desc";
-                    ViewData["SortIconDesc"] = "fa fa-arrow-down";
-                    break;
-
-                case "description_desc":
-                    sortOrder = SortOrder.Descending;
-                    sortproperty = "description";
-                    ViewData["SortParamDesc"] = "description";
-                    ViewData["SortIconDesc"] = "fa fa-arrow-up";
-                    break;
-                default:
-                    sortOrder = SortOrder.Ascending;
-                    sortproperty = "name";
-                    ViewData["SortIconName"]="fa fa-arrow-down";
-                    ViewData["SortParamName"] = "name_desc";
-                    break;
-            }
-
-            List<Unit> units = _unitRepo.GetItems(sortproperty,sortOrder);//_context.Units.ToList();
-            return View(units);
-        }
-
 
         private readonly IUnit _unitRepo;
-
-
-        public UnitController(IUnit unitrepo)
+        public UnitController(IUnit unitrepo) // here the repository will be passed by the dependency injection.
         {
             _unitRepo = unitrepo;
         }
 
-        public IActionResult Details(int id)
+
+        public IActionResult Index(string sortExpression = "", string SearchText = "", int pg = 1, int pageSize = 5)
         {
-            Unit unit = _unitRepo.GetUnit(id);
-            return View(unit);
+            SortModel sortModel = new SortModel();
+            sortModel.AddColumn("name");
+            sortModel.AddColumn("description");
+            sortModel.ApplySort(sortExpression);
+            ViewData["sortModel"] = sortModel;
+
+            ViewBag.SearchText = SearchText;
+
+            PaginatedList<Unit> units = _unitRepo.GetItems(sortModel.SortedProperty, sortModel.SortedOrder, SearchText, pg, pageSize);
+
+
+            var pager = new PagerModel(units.TotalRecords, pg, pageSize);
+            pager.SortExpression = sortExpression;
+            this.ViewBag.Pager = pager;
+
+
+            TempData["CurrentPage"] = pg;
+
+
+            return View(units);
         }
 
 
@@ -85,47 +48,105 @@ namespace InventoryManagement.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create( Unit unit)
+        public IActionResult Create(Unit unit)
         {
+            bool bolret = false;
+            string errMessage = "";
             try
             {
-                unit = _unitRepo.Create(unit);
-            }
-            catch
-            {
+                if (unit.Description.Length < 4 || unit.Description == null)
+                    errMessage = "Unit Description Must be atleast 4 Characters";
 
+                if (_unitRepo.IsUnitNameExists(unit.Name) == true)
+                    errMessage = errMessage + " " + " Unit Name " + unit.Name + " Exists Already";
+
+                if (errMessage == "")
+                {
+                    unit = _unitRepo.Create(unit);
+                    bolret = true;
+                }
             }
-            return RedirectToAction(nameof(Index));
+            catch (Exception ex)
+            {
+                errMessage = errMessage + " " + ex.Message;
+            }
+            if (bolret == false)
+            {
+                TempData["ErrorMessage"] = errMessage;
+                ModelState.AddModelError("", errMessage);
+                return View(unit);
+            }
+            else
+            {
+                TempData["SuccessMessage"] = "Unit " + unit.Name + " Created Successfully";
+                return RedirectToAction(nameof(Index));
+            }
         }
 
+        public IActionResult Details(int id) //Read
+        {
+            Unit unit = _unitRepo.GetUnit(id);
+            return View(unit);
+        }
 
 
         public IActionResult Edit(int id)
         {
             Unit unit = _unitRepo.GetUnit(id);
+            TempData.Keep();
             return View(unit);
         }
 
         [HttpPost]
         public IActionResult Edit(Unit unit)
         {
-          try
-                {
-                 unit = _unitRepo.Edit(unit);
-                }
-                catch
-                {
+            bool bolret = false;
+            string errMessage = "";
 
+            try
+            {
+                if (unit.Description.Length < 4 || unit.Description == null)
+                    errMessage = "Unit Description Must be atleast 4 Characters";
+
+                if (_unitRepo.IsUnitNameExists(unit.Name, unit.Id) == true)
+                    errMessage = errMessage + "Unit Name " + unit.Name + " Already Exists";
+
+                if (errMessage == "")
+                {
+                    unit = _unitRepo.Edit(unit);
+                    TempData["SuccessMessage"] = unit.Name + ", Unit Saved Successfully";
+                    bolret = true;
                 }
-                return RedirectToAction(nameof(Index));
-         
+            }
+            catch (Exception ex)
+            {
+                errMessage = errMessage + " " + ex.Message;
+            }
+
+
+
+            int currentPage = 1;
+            if (TempData["CurrentPage"] != null)
+                currentPage = (int)TempData["CurrentPage"];
+
+
+            if (bolret == false)
+            {
+                TempData["ErrorMessage"] = errMessage;
+                ModelState.AddModelError("", errMessage);
+                return View(unit);
+            }
+            else
+                return RedirectToAction(nameof(Index), new { pg = currentPage });
         }
 
         public IActionResult Delete(int id)
         {
             Unit unit = _unitRepo.GetUnit(id);
+            TempData.Keep();
             return View(unit);
         }
+
 
         [HttpPost]
         public IActionResult Delete(Unit unit)
@@ -134,11 +155,21 @@ namespace InventoryManagement.Controllers
             {
                 unit = _unitRepo.Delete(unit);
             }
-            catch
+            catch (Exception ex)
             {
-
+                string errMessage = ex.Message;
+                TempData["ErrorMessage"] = errMessage;
+                ModelState.AddModelError("", errMessage);
+                return View(unit);
             }
-            return RedirectToAction(nameof(Index));
+
+            int currentPage = 1;
+            if (TempData["CurrentPage"] != null)
+                currentPage = (int)TempData["CurrentPage"];
+
+            TempData["SuccessMessage"] = "Unit " + unit.Name + " Deleted Successfully";
+            return RedirectToAction(nameof(Index), new { pg = currentPage });
+
 
         }
 
