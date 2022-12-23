@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Open+Sans:wght@400;700&display=swap');
+
 html {
-  font-size: 14px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
@@ -18,11 +24,14 @@ body {
 }
 .IndexDiv {
     position: fixed;
-    background: linear-gradient(to right, #00ff99 0%, #6699ff 100%);
+    background-image: url('/images/background.jpg');
+    background-size: cover;
     top: 7%;
     left: 0;
     min-height: 85%;
-    min-width: 100%
+    min-width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .right-aligned {
@@ -43,11 +52,11 @@ body {
     left:50%;
 }
 
-.CenteredContainer form {
-        background: linear-gradient(to left, #00ff99 0%, #6699ff 100% );
-        padding:3em;
+    .CenteredContainer form {
+        background: rgb(166, 161, 158, 0.5);
+        padding: 3em;
         border-radius: 20px
-}
+    }
 
 .CenteredContainer form a{
     text-decoration:none;
@@ -74,4 +83,9 @@ body {
 .CenteredContainer a,input:focus,submit:focus,button:focus{
     outline:none;
     margin:2px;
+}
+
+.nav-item:hover {
+    background-color: #767571;
+    border-radius:120px;
 }

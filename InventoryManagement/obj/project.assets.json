@@ -10424,19 +10424,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dedushaj\\.nuget\\packages\\": {}
+    "C:\\Users\\artin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
+      "projectUniqueName": "C:\\Users\\artin\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
       "projectName": "InventoryManagement",
-      "projectPath": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
-      "packagesPath": "C:\\Users\\Dedushaj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\obj\\",
+      "projectPath": "C:\\Users\\artin\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
+      "packagesPath": "C:\\Users\\artin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\artin\\Desktop\\InventoryManagement\\InventoryManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dedushaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\artin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10504,7 +10504,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
