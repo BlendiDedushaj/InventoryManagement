@@ -8,21 +8,18 @@ using Microsoft.EntityFrameworkCore;
 using InventoryManagement.Data;
 using InventoryManagement.Models;
 using InventoryManagement.Interfaces;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Authorization;
 
 namespace InventoryManagement.Controllers
 {
-    [Authorize]
-    public class BrandController : Controller
+    public class CurrencyController : Controller
     {
-        private readonly IBrand _Repo;
-        public BrandController(IBrand repo) // here the repository will be passed by the dependency injection.
+        private readonly ICurrency _Repo;
+        public CurrencyController(ICurrency repo) // here the repository will be passed by the dependency injection.
         {
             _Repo = repo;
         }
 
-        
+
         public IActionResult Index(string sortExpression = "", string SearchText = "", int pg = 1, int pageSize = 5)
         {
             SortModel sortModel = new SortModel();
@@ -33,7 +30,7 @@ namespace InventoryManagement.Controllers
 
             ViewBag.SearchText = SearchText;
 
-            PaginatedList<Brand> items = _Repo.GetItems(sortModel.SortedProperty, sortModel.SortedOrder, SearchText, pg, pageSize);
+            PaginatedList<Currency> items = _Repo.GetItems(sortModel.SortedProperty, sortModel.SortedOrder, SearchText, pg, pageSize);
 
 
             var pager = new PagerModel(items.TotalRecords, pg, pageSize);
@@ -42,43 +39,37 @@ namespace InventoryManagement.Controllers
 
 
             TempData["CurrentPage"] = pg;
-
-
             return View(items);
         }
 
-    
+
         public IActionResult Create()
         {
-            Brand item = new Brand();
+            Currency item = new Currency();
+            ViewBag.ExchangeCurrencyId = GetCurrencyList();
+
             return View(item);
         }
 
         [HttpPost]
-        public IActionResult Create(Brand item)
+        public IActionResult Create(Currency item)
         {
             bool bolret = false;
             string errMessage = "";
             try
             {
-                if (item.Description.Length < 4 || item.Description == null)
-                    errMessage = "Description Must be atleast 4 Characters";
-
-                if (_Repo.IsItemExists(item.Name) == true)
-                    errMessage = errMessage + " " + " Name " + item.Name + " Exists Already";
-
-                if (errMessage == "")
-                {
-                    item = _Repo.Create(item);
-                    bolret = true;
-                }
+                bolret = _Repo.Create(item);
             }
             catch (Exception ex)
             {
                 errMessage = errMessage + " " + ex.Message;
             }
+
+
             if (bolret == false)
             {
+                errMessage = errMessage + " " + _Repo.GetErrors();
+
                 TempData["ErrorMessage"] = errMessage;
                 ModelState.AddModelError("", errMessage);
                 return View(item);
@@ -89,47 +80,37 @@ namespace InventoryManagement.Controllers
                 return RedirectToAction(nameof(Index));
             }
         }
-      
+
         public IActionResult Details(int id) //Read
         {
-            Brand item = _Repo.GetItem(id);
+            Currency item = _Repo.GetItem(id);
+            ViewBag.ExchangeCurrencyId = GetCurrencyList();
             return View(item);
         }
 
-   
+
         public IActionResult Edit(int id)
         {
-            Brand item = _Repo.GetItem(id);
+            Currency item = _Repo.GetItem(id);
+            ViewBag.ExchangeCurrencyId = GetCurrencyList();
             TempData.Keep();
             return View(item);
         }
 
-   
-        public IActionResult Edit(Brand item)
+        [HttpPost]
+        public IActionResult Edit(Currency item)
         {
             bool bolret = false;
             string errMessage = "";
 
             try
             {
-                if (item.Description.Length < 4 || item.Description == null)
-                    errMessage = "Description Must be atleast 4 Characters";
-
-                if (_Repo.IsItemExists(item.Name, item.Id) == true)
-                    errMessage = errMessage + item.Name + " Already Exists";
-
-                if (errMessage == "")
-                {
-                    item = _Repo.Edit(item);
-                    TempData["SuccessMessage"] = item.Name + ", Saved Successfully";
-                    bolret = true;
-                }
+                bolret = _Repo.Edit(item);
             }
             catch (Exception ex)
             {
                 errMessage = errMessage + " " + ex.Message;
             }
-
 
 
             int currentPage = 1;
@@ -139,6 +120,7 @@ namespace InventoryManagement.Controllers
 
             if (bolret == false)
             {
+                errMessage = errMessage + " " + _Repo.GetErrors();
                 TempData["ErrorMessage"] = errMessage;
                 ModelState.AddModelError("", errMessage);
                 return View(item);
@@ -149,38 +131,71 @@ namespace InventoryManagement.Controllers
 
         public IActionResult Delete(int id)
         {
-            Brand item = _Repo.GetItem(id);
+            Currency item = _Repo.GetItem(id);
+            ViewBag.ExchangeCurrencyId = GetCurrencyList();
             TempData.Keep();
             return View(item);
         }
 
 
         [HttpPost]
-        public IActionResult Delete(Brand item)
+        public IActionResult Delete(Currency item)
         {
+            bool bolret = false;
+            string errMessage = "";
             try
             {
-                item = _Repo.Delete(item);
+                bolret = _Repo.Delete(item);
             }
             catch (Exception ex)
             {
-                string errMessage = ex.Message;
+                errMessage = ex.Message;
                 TempData["ErrorMessage"] = errMessage;
                 ModelState.AddModelError("", errMessage);
                 return View(item);
-
             }
 
             int currentPage = 1;
             if (TempData["CurrentPage"] != null)
                 currentPage = (int)TempData["CurrentPage"];
 
-            TempData["SuccessMessage"] = item.Name + " Deleted Successfully";
-            return RedirectToAction(nameof(Index), new { pg = currentPage });
 
-
+            if (bolret == false)
+            {
+                errMessage = errMessage + " " + _Repo.GetErrors();
+                TempData["ErrorMessage"] = errMessage;
+                ModelState.AddModelError("", errMessage);
+                return View(item);
+            }
+            else
+            {
+                TempData["SuccessMessage"] = item.Name + " Deleted Successfully";
+                return RedirectToAction(nameof(Index), new { pg = currentPage });
+            }
         }
 
 
+
+        private List<SelectListItem> GetCurrencyList()
+        {
+            var lstItems = new List<SelectListItem>();
+
+            PaginatedList<Currency> items = _Repo.GetItems("Name", SortOrder.Ascending, "", 1, 1000);
+            lstItems = items.Select(ut => new SelectListItem()
+            {
+                Value = ut.Id.ToString(),
+                Text = ut.Name
+            }).ToList();
+
+            var defItem = new SelectListItem()
+            {
+                Value = "",
+                Text = "----Select Exchange Currency ----"
+            };
+
+            lstItems.Insert(0, defItem);
+
+            return lstItems;
+        }
+     }
     }
-}

@@ -15,5 +15,7 @@ namespace InventoryManagement.Data
         public virtual DbSet<Supplier> Suppliers { get; set; }
 
         public virtual DbSet<Category> Categories { get; set; }
+
+        public virtual DbSet<Currency> Currencies { get; set; }
     }
 }
