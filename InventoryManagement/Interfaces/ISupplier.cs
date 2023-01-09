@@ -2,7 +2,7 @@
 using InventoryManagement.Models;
 using Microsoft.Data.SqlClient;
 using SortOrder = InventoryManagement.Models.SortOrder;
-using InventoryManagement.Models;
+
 
 namespace InventoryManagement.Interfaces
 {

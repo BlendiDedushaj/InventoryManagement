@@ -2,7 +2,6 @@
 using InventoryManagement.Models;
 using InventoryManagement.Data;
 using InventoryManagement.Interfaces;
-using InventoryManagement.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace InventoryManagement.Repositories

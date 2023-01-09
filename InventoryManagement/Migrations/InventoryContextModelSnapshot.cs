@@ -99,6 +99,83 @@ namespace InventoryManagement.Migrations
                     b.ToTable("Currencies");
                 });
 
+            modelBuilder.Entity("InventoryManagement.Models.Product", b =>
+                {
+                    b.Property<string>("Code")
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
+
+                    b.Property<int?>("BrandId")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CategoryId")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Cost")
+                        .HasColumnType("smallmoney");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(75)
+                        .HasColumnType("nvarchar(75)");
+
+                    b.Property<string>("PhotoUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("smallmoney");
+
+                    b.Property<int?>("ProductGroupId")
+                        .IsRequired()
+                        .HasColumnType("int");
+
+                    b.Property<int>("UnitId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Code");
+
+                    b.HasIndex("BrandId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("ProductGroupId");
+
+                    b.HasIndex("UnitId");
+
+                    b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("InventoryManagement.Models.ProductGroup", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(75)
+                        .HasColumnType("nvarchar(75)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(25)
+                        .HasColumnType("nvarchar(25)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductGroups");
+                });
+
             modelBuilder.Entity("InventoryManagement.Models.Supplier", b =>
                 {
                     b.Property<int>("Id")
@@ -369,6 +446,41 @@ namespace InventoryManagement.Migrations
                         .HasForeignKey("ExchangeCurrencyId");
 
                     b.Navigation("Currencies");
+                });
+
+            modelBuilder.Entity("InventoryManagement.Models.Product", b =>
+                {
+                    b.HasOne("InventoryManagement.Models.Brand", "Brands")
+                        .WithMany()
+                        .HasForeignKey("BrandId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("InventoryManagement.Models.Category", "Categories")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("InventoryManagement.Models.ProductGroup", "ProductGroups")
+                        .WithMany()
+                        .HasForeignKey("ProductGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("InventoryManagement.Models.Unit", "Units")
+                        .WithMany()
+                        .HasForeignKey("UnitId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Brands");
+
+                    b.Navigation("Categories");
+
+                    b.Navigation("ProductGroups");
+
+                    b.Navigation("Units");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
