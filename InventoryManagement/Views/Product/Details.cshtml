@@ -43,6 +43,12 @@
             <input asp-for="@Model.Units.Name" class="form-control" readonly />
         </div>
 
+        <div class="form-group col-12 justify-content-center align-middle mb-0 pb-0">
+            <img id="PreviewPhoto" src="~/images/@Model.PhotoUrl" alt="Logo Image"
+                 width="300" height="300" style="border:1px ;margin-top:30px; " />
+
+       
+
 
         <div class="form-group btn-group">
             <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Code">Edit</a>
@@ -50,6 +56,8 @@
                asp-route-pg="@TempData.Peek("CurrentPage")">Back</a>
         </div>
     </div>
+
+  
 </form>
 
 
