@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj": {}
+    "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\InventoryManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj": {
+    "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\InventoryManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
+        "projectUniqueName": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\InventoryManagement.csproj",
         "projectName": "InventoryManagement",
-        "projectPath": "C:\\Users\\HP\\Desktop\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\InventoryManagement\\InventoryManagement\\obj\\",
+        "projectPath": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\InventoryManagement.csproj",
+        "packagesPath": "C:\\Users\\artin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\artin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -11,6 +11,8 @@ builder.Services.AddDbContext<InventoryContext>(options =>
     options.UseSqlServer(connectionString));
 // Add services to the container.
 
+
+
 builder.Services.AddScoped<IUnit, UnitRepository>();
 builder.Services.AddScoped<ISupplier, SupplierRepo>();
 builder.Services.AddScoped<IBrand, BrandRepo>();
@@ -22,11 +24,13 @@ builder.Services.AddScoped<IProductGroup, ProductGroupRepo>();
 
 builder.Services.AddDbContext<InventoryContext>(options => options.UseSqlServer(builder.Configuration.GetSection("ConnectionStrings:dbconn").Value));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+builder.Services.AddDefaultIdentity<IdentityUser>()
+    .AddDefaultTokenProviders().AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<InventoryContext>();
 
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -35,6 +39,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

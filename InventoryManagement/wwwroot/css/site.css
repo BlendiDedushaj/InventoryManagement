@@ -17,15 +17,16 @@ html {
 html {
     position: relative;
     min-height: 100%;
+    
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-image: url('/images/background.jpg');
+    background-size: cover;
 }
 .IndexDiv {
     position: fixed;
-    background-image: url('/images/background.jpg');
-    background-size: cover;
     top: 7%;
     left: 0;
     min-height: 85%;

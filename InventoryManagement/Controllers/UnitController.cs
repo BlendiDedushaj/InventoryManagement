@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InventoryManagement.Controllers
 {
-    [Authorize]
+    
     public class UnitController : Controller
     {
 
@@ -15,7 +15,7 @@ namespace InventoryManagement.Controllers
             _unitRepo = unitrepo;
         }
 
-
+        [Authorize(Roles = "Admin,Employee")]
         public IActionResult Index(string sortExpression = "", string SearchText = "", int pg = 1, int pageSize = 5)
         {
             SortModel sortModel = new SortModel();
@@ -47,6 +47,7 @@ namespace InventoryManagement.Controllers
             return View(unit);
         }
 
+        [Authorize(Roles = "Admin,Employee")]
         [HttpPost]
         public IActionResult Create(Unit unit)
         {
@@ -83,13 +84,14 @@ namespace InventoryManagement.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin,Employee")]
         public IActionResult Details(int id) //Read
         {
             Unit unit = _unitRepo.GetUnit(id);
             return View(unit);
         }
 
-
+        [Authorize(Roles = "Admin")]
         public IActionResult Edit(int id)
         {
             Unit unit = _unitRepo.GetUnit(id);
@@ -97,6 +99,7 @@ namespace InventoryManagement.Controllers
             return View(unit);
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Edit(Unit unit)
         {
@@ -140,6 +143,7 @@ namespace InventoryManagement.Controllers
                 return RedirectToAction(nameof(Index), new { pg = currentPage });
         }
 
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
             Unit unit = _unitRepo.GetUnit(id);
@@ -148,6 +152,7 @@ namespace InventoryManagement.Controllers
         }
 
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Delete(Unit unit)
         {
