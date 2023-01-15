@@ -17,14 +17,15 @@ namespace InventoryManagement.Controllers
         private readonly IBrand _brandRepo;
         private readonly ICategory _categoryRepo;
         private readonly IProductGroup _productGroupRepo;
-        
+        private readonly IProductProfile _productProfileRepo;
+
 
 
 
 
         private readonly IUnit _unitRepo;
         private readonly IProduct _productRepo;
-        public ProductController(IProduct productrepo, IUnit unitrepo, IBrand brandRepo, ICategory categoryRepo, IProductGroup productGroupRepo, IWebHostEnvironment webHost) // here the repository will be passed by the dependency injection.
+        public ProductController(IProduct productrepo, IUnit unitrepo, IBrand brandRepo, ICategory categoryRepo, IProductGroup productGroupRepo, IProductProfile productProfileRepo, IWebHostEnvironment webHost) // here the repository will be passed by the dependency injection.
         {
 
             _webHost = webHost;
@@ -38,7 +39,8 @@ namespace InventoryManagement.Controllers
 
 
             _productGroupRepo = productGroupRepo;
-            
+            _productProfileRepo = productProfileRepo;
+
 
 
         }
@@ -86,6 +88,7 @@ namespace InventoryManagement.Controllers
 
             ViewBag.ProductGroups = GetProductGroups();
 
+            ViewBag.ProductProfiles = GetProductProfiles();
         }
 
         public IActionResult Create()
@@ -167,6 +170,8 @@ namespace InventoryManagement.Controllers
             ViewBag.Categories = GetCategories();
 
             ViewBag.ProductGroups = GetProductGroups();
+
+            ViewBag.ProductProfiles = GetProductProfiles();
 
 
             TempData.Keep();
@@ -354,7 +359,27 @@ namespace InventoryManagement.Controllers
         }
 
 
-      
+        private List<SelectListItem> GetProductProfiles()
+        {
+            var lstItems = new List<SelectListItem>();
+
+            PaginatedList<ProductProfile> items = _productProfileRepo.GetItems("Name", SortOrder.Ascending, "", 1, 1000);
+            lstItems = items.Select(ut => new SelectListItem()
+            {
+                Value = ut.Id.ToString(),
+                Text = ut.Name
+            }).ToList();
+
+            var defItem = new SelectListItem()
+            {
+                Value = "",
+                Text = "----Select ProductProfile----"
+            };
+
+            lstItems.Insert(0, defItem);
+
+            return lstItems;
+        }
 
 
 

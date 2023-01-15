@@ -21,6 +21,8 @@ namespace InventoryManagement.Data
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<ProductGroup> ProductGroups { get; set; }
 
+        public virtual DbSet<ProductProfile> ProductProfiles { get; set; }
+
         public virtual DbSet<ApplicationUser> ApplicationUser { get; set; }
        
     }

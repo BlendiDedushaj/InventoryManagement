@@ -53,6 +53,10 @@ namespace InventoryManagement.Models
         public int? ProductGroupId { get; set; }
         public virtual ProductGroup ProductGroups { get; set; }
 
+        [ForeignKey("ProductProfiles")]
+        [Display(Name = "ProductProfile")]
+        public int? ProductProfileId { get; set; }
+        public virtual ProductProfile ProductProfiles { get; set; }
 
 
         public string PhotoUrl { get; set; } = "noimage.png";
