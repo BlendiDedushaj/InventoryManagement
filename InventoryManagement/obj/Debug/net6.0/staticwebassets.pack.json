@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\images\\84ad452a-8ebb-4633-8381-7ea0f4583865_1.jpg"
     },
     {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\8b27de65-3b62-44f9-bb1a-4487e9f25cb9_png-transparent-hoodie-green-bluza-zipper-hoodie-active-shirt-adidas-bluza-thumbnail.png",
+      "PackagePath": "staticwebassets\\images\\8b27de65-3b62-44f9-bb1a-4487e9f25cb9_png-transparent-hoodie-green-bluza-zipper-hoodie-active-shirt-adidas-bluza-thumbnail.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\IMSLogo.png",
+      "PackagePath": "staticwebassets\\images\\IMSLogo.png"
+    },
+    {
       "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\ShoppingCart.png",
       "PackagePath": "staticwebassets\\images\\ShoppingCart.png"
     },
@@ -27,6 +35,22 @@
     {
       "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\cart.png",
       "PackagePath": "staticwebassets\\images\\cart.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\slide1.png",
+      "PackagePath": "staticwebassets\\images\\slide1.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\slide2.png",
+      "PackagePath": "staticwebassets\\images\\slide2.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\slide3.png",
+      "PackagePath": "staticwebassets\\images\\slide3.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\slide4.png",
+      "PackagePath": "staticwebassets\\images\\slide4.png"
     },
     {
       "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\js\\site.js",
