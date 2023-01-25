@@ -5,249 +5,248 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = InventoryManagement
 build_property.RootNamespace = InventoryManagement
-build_property.ProjectDir = C:\Users\Dedushaj\Desktop\InventoryManagement\InventoryManagement\
+build_property.ProjectDir = C:\Users\artin\Desktop\INVENTORY\InventoryManagement\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Dedushaj\Desktop\InventoryManagement\InventoryManagement
+build_property.MSBuildProjectDirectory = C:\Users\artin\Desktop\INVENTORY\InventoryManagement
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/AppRoles/Create.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/AppRoles/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/AppRoles/Index.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/AppRoles/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Brand/Create.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Brand/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Brand/Delete.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Brand/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Brand/Details.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Brand/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Brand/Edit.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Brand/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Brand/Index.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Brand/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Category/Create.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Category/Delete.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Category/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Category/Details.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Category/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Category/Edit.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Category/Index.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Currency/Create.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Currency/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmVuY3lcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Currency/Delete.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Currency/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmVuY3lcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Currency/Details.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Currency/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmVuY3lcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Currency/Edit.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Currency/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmVuY3lcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Currency/Index.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Currency/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VycmVuY3lcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Home/Index.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Home/Privacy.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/ProductGroup/Create.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/ProductGroup/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEdyb3VwXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/ProductGroup/Delete.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/ProductGroup/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEdyb3VwXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/ProductGroup/Details.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/ProductGroup/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEdyb3VwXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/ProductGroup/Edit.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/ProductGroup/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEdyb3VwXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/ProductGroup/Index.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/ProductGroup/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdEdyb3VwXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/ProductProfile/Create.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/ProductProfile/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFByb2ZpbGVcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/ProductProfile/Delete.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/ProductProfile/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFByb2ZpbGVcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/ProductProfile/Details.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/ProductProfile/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFByb2ZpbGVcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/ProductProfile/Edit.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/ProductProfile/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFByb2ZpbGVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/ProductProfile/Index.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/ProductProfile/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFByb2ZpbGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Product/Create.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Product/Delete.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Product/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Product/Details.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Product/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Product/Edit.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Product/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Product/Index.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Shared/Error.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Shared/_bottomBar.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Shared/_bottomBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9ib3R0b21CYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Shared/_topBar.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Shared/_topBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF90b3BCYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Supplier/Create.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Supplier/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Supplier/Delete.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Supplier/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Supplier/Details.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Supplier/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Supplier/Edit.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Supplier/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Supplier/Index.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Supplier/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3VwcGxpZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Unit/Create.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Unit/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Unit/Delete.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Unit/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Unit/Details.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Unit/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Unit/Edit.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Unit/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Unit/Index.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Unit/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/_ViewImports.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/_ViewStart.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Dedushaj/Desktop/InventoryManagement/InventoryManagement/Views/Shared/_Layout.cshtml]
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-c4618qd80j

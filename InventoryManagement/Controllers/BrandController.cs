@@ -147,6 +147,8 @@ namespace InventoryManagement.Controllers
                 return RedirectToAction(nameof(Index), new { pg = currentPage });
         }
 
+
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
             Brand item = _Repo.GetItem(id);
@@ -154,7 +156,7 @@ namespace InventoryManagement.Controllers
             return View(item);
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         public IActionResult Delete(Brand item)
         {

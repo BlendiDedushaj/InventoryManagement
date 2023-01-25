@@ -13,6 +13,7 @@ namespace InventoryManagement.Controllers
 {
     public class CurrencyController : Controller
     {
+
         private readonly ICurrency _Repo;
         public CurrencyController(ICurrency repo) // here the repository will be passed by the dependency injection.
         {

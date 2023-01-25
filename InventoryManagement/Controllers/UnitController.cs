@@ -8,7 +8,7 @@ namespace InventoryManagement.Controllers
     
     public class UnitController : Controller
     {
-
+        
         private readonly IUnit _unitRepo;
         public UnitController(IUnit unitrepo) // here the repository will be passed by the dependency injection.
         {

@@ -24,6 +24,7 @@ body {
     margin-bottom: 60px;
     background-image: url('/images/background.jpg');
     background-size: cover;
+    
 }
 .IndexDiv {
     position: fixed;
@@ -55,8 +56,9 @@ body {
 
     .CenteredContainer form {
         background: rgb(166, 161, 158, 0.5);
-        padding: 3em;
-        border-radius: 20px
+        padding: 2em;
+        border-radius: 20px;
+        margin-top:50px;
     }
 
 .CenteredContainer form a{
@@ -69,12 +71,15 @@ body {
     text-shadow: 2px 2px 6px #000040;
 }
 
-.CenteredContainer form input{
-    border-radius:20px;
-}
+        .CenteredContainer form input {
+            border-radius: 20px;
+            margin-bottom: 10px;
+
+        }
 .CenteredContainer form .btn{
     width: 150px;
     font-size:1em;
+    margin-top:20px;
 }
 
 /*.CenteredContainer form:hover{
@@ -90,3 +95,4 @@ body {
     background-color: #767571;
     border-radius:120px;
 }
+

@@ -5,9 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace InventoryManagement.Controllers
 {
-    [Authorize]
+
     public class ProductGroupController : Controller
     {
+
+        
 
         private readonly IProductGroup _Repo;
         public ProductGroupController(IProductGroup repo) // here the repository will be passed by the dependency injection.
