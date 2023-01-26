@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Open+Sans:wght@400;700&display=swap') 
 
 html {
     font-size: 14px;
@@ -24,7 +24,7 @@ body {
     margin-bottom: 60px;
     background-image: url('/images/background.jpg');
     background-size: cover;
-    
+ 
 }
 .IndexDiv {
     position: fixed;
@@ -95,4 +95,25 @@ body {
     background-color: #767571;
     border-radius:120px;
 }
+.carousel-item img{
+    height:400px;
+}
+.containers {
+    background-image: url('/images/69_generated.jpg');
+    background-size: cover;
+}
 
+.firstpage{
+    margin-bottom:150px;
+    padding-top:30px;
+}
+.firstpage h1{
+    margin-bottom:30px;
+}
+    .firstpage button {
+        margin-left: 300px;
+        padding: 17px;
+        width: 200px;
+        margin-top: 50px;
+        margin-top: 20px;
+    }
