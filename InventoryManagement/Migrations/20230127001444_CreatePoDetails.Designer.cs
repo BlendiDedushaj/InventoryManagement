@@ -4,6 +4,7 @@ using InventoryManagement.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InventoryManagement.Migrations
 {
     [DbContext(typeof(InventoryContext))]
-    partial class InventoryContextModelSnapshot : ModelSnapshot
+    [Migration("20230127001444_CreatePoDetails")]
+    partial class CreatePoDetails
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -595,7 +597,7 @@ namespace InventoryManagement.Migrations
             modelBuilder.Entity("InventoryManagement.Models.PoDetail", b =>
                 {
                     b.HasOne("InventoryManagement.Models.PoHeader", "PoHeader")
-                        .WithMany("PoDetails")
+                        .WithMany()
                         .HasForeignKey("PoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -730,11 +732,6 @@ namespace InventoryManagement.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("InventoryManagement.Models.PoHeader", b =>
-                {
-                    b.Navigation("PoDetails");
                 });
 #pragma warning restore 612, 618
         }

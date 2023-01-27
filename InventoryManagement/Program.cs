@@ -18,6 +18,7 @@ builder.Services.AddScoped<ISupplier, SupplierRepo>();
 builder.Services.AddScoped<IBrand, BrandRepo>();
 builder.Services.AddScoped<ICategory, CategoryRepo>();
 builder.Services.AddScoped<ICurrency, CurrencyRepo>();
+builder.Services.AddScoped<IPurchaseOrder, PurchaseOrderRepo>();
 builder.Services.AddScoped<IProduct, ProductRepo>();
 builder.Services.AddScoped<IProductGroup, ProductGroupRepo>();
 builder.Services.AddScoped<IProductProfile, ProductProfileRepo>();

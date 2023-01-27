@@ -10,7 +10,7 @@ namespace InventoryManagement.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "PoHeader",
+                name: "PoHeaders",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -29,21 +29,21 @@ namespace InventoryManagement.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PoHeader", x => x.Id);
+                    table.PrimaryKey("PK_PoHeaders", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PoHeader_Currencies_BaseCurrencyId",
+                        name: "FK_PoHeaders_Currencies_BaseCurrencyId",
                         column: x => x.BaseCurrencyId,
                         principalTable: "Currencies",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
-                        name: "FK_PoHeader_Currencies_PoCurrencyId",
+                        name: "FK_PoHeaders_Currencies_PoCurrencyId",
                         column: x => x.PoCurrencyId,
                         principalTable: "Currencies",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
-                        name: "FK_PoHeader_Suppliers_SupplierId",
+                        name: "FK_PoHeaders_Suppliers_SupplierId",
                         column: x => x.SupplierId,
                         principalTable: "Suppliers",
                         principalColumn: "Id",
@@ -51,25 +51,25 @@ namespace InventoryManagement.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_PoHeader_BaseCurrencyId",
-                table: "PoHeader",
+                name: "IX_PoHeaders_BaseCurrencyId",
+                table: "PoHeaders",
                 column: "BaseCurrencyId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PoHeader_PoCurrencyId",
-                table: "PoHeader",
+                table: "PoHeaders",
                 column: "PoCurrencyId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PoHeader_SupplierId",
-                table: "PoHeader",
+                name: "IX_PoHeaders_SupplierId",
+                table: "PoHeaders",
                 column: "SupplierId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "PoHeader");
+                name: "PoHeaders");
         }
     }
 }
