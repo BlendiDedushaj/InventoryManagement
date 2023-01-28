@@ -10,7 +10,8 @@
         <div class="col-8">
                 <p><h1 class="text-center font-weight-bolder right-aligned">INVENTORY MANAGEMENT</h1></p>
                 <p><h5 class="right-aligned">Simple to use, beautifully designed, customizable inventory software system for any business buying and selling goods.</h5></p>
-                <button type="button" class="btn btn-dark">Manage Inventory</button>
+                <a asp-area="" asp-controller="Product" asp-action="Index">Products</a>
+                           
         </div>
         </div>
         </div>
@@ -45,6 +46,68 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="thirdpage">
+        <h1>Trusted by businesses around the world</h1>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="/images/person3.png" class="img-fluid rounded-start" alt="..." style="height:100px;margin:50px;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    
+                                    <p class="card-text">Inventory has been one of the easiest inventory programs to work with. Not only is it easy to use, it is always updating with features from SKUs management, multiple locations inventory control, ordering and third party features and integration.</p>
+                                    <h5 class="card-title">Mathew M.</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card mb-3" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="/images/person1.png" class="img-fluid rounded-start" alt="..." style="height:100px;margin:50px;">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <p class="card-text">This software is capable of catering to your unique needs. It is a great option for start-ups and you get a lot of pack for the punch. You are paying a cost effective price point for optimal software. Inventory is a lot easier to manage using Inventory.</p>
+                                    <h5 class="card-title">Gertie Z</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card mb-3" style="max-width: 540px;">
+                          <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="/images/person2.png" class="img-fluid rounded-start" alt="..." style="height:100px;margin:50px;">
+                            </div>
+                            <div class="col-md-8">
+                              <div class="card-body">
+                              
+                                    <p class="card-text">I love the simplicity of this program. I have over 1000 items in my warehouse we distribute to 32 stores. It makes the entire purchasing and invoicing system extremely easy for myself and my customers.</p>
+                                    <h5 class="card-title">Linda S.</h5>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
         </div>
     </div>
 
