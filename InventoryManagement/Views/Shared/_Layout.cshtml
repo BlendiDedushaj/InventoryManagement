@@ -32,6 +32,9 @@
                             <li class="nav-item">
                                 <a class="nav-link @menuTextColor" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link @menuTextColor" asp-area="" asp-controller="Features" asp-action="Index">Features</a>
+                            </li>
                             @if (SignInManager.IsSignedIn(User))
                             {
                                 <li class="nav-item dropdown @menuTextColor">
@@ -150,7 +153,7 @@
 
     <footer class="border-top footer text-muted" style="background:rgb(131,130,126 , 0.7);">
         <div class="container @menuTextColor">
-            &copy; 2022 - InventoryManagement - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="@menuTextColor">Privacy</a>
+            &copy; 2022 - InventoryManagement
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
