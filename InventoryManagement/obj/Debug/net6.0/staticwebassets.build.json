@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9q0Bfp31MGS7TdFkZF006269TYZESBPFvNBM5eJtiag=",
+  "Hash": "7PRcoai40ebVE6/WSzcAs6EeCMRjE3mR0NDfQQsRpzA=",
   "Source": "InventoryManagement",
   "BasePath": "_content/InventoryManagement",
   "Mode": "Default",
@@ -1409,6 +1409,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\slide4.png"
+    },
+    {
+      "Identity": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\images\\supplier.png",
+      "SourceId": "InventoryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\",
+      "BasePath": "_content/InventoryManagement",
+      "RelativePath": "images/supplier.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\supplier.png"
     },
     {
       "Identity": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\images\\warehouse-management-software.png",
