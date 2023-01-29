@@ -1,29 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Open+Sans:wght@400;700&display=swap') 
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap');
+
+
 
 html {
     font-size: 14px;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Kanit', sans-serif;
 }
 
 @media (min-width: 768px) {
     html {
         font-size: 16px;
-        font-family: 'Inter', sans-serif;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Kanit', sans-serif;
     }
 }
 
 html {
     position: relative;
     min-height: 100%;
-    
+    font-family: 'Kanit', sans-serif;
 }
 
 body {
     margin-bottom: 60px;
     background-image: url('/images/background.jpg');
     background-size: cover;
+    font-family: 'Kanit', sans-serif;
 }
 .homepage{
     background-image: url('/images/background.jpg');
@@ -35,8 +36,7 @@ body {
     left: 0;
     min-height: 85%;
     min-width: 100%;
-    font-family: 'Inter', sans-serif;
-    font-family: 'Open Sans', sans-serif;
+    
 }
 
 .right-aligned {
@@ -100,6 +100,7 @@ body {
 }
 .carousel-item img{
     height:400px;
+
 }
 .containers {
     background-image: url('/images/69_generated.jpg');
@@ -163,9 +164,10 @@ body {
 }
 .card {
     background-color: #f3f4f6;
-    border-radius:40px;
-    margin-top:50px;
-    padding:40px;
+    border-radius: 40px;
+    margin-top: 50px;
+    padding: 40px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 .firstpage a {
     padding: 18px 40px;
@@ -215,12 +217,22 @@ body {
     color:black;
 }
 
-.fourth-page{
-    margin-top:150px;
+.fourth-page {
+    margin-top: 100px;
+    background-image: url('/images/69_generated.jpg');
+    background-size: cover;
+    padding: 50px;
+
 }
-.fourth-page .card {
-    background-color: #f3f4f6;
-    border-radius: 10px;
-    margin-top: 10px;
-    padding: 20px;
+    .fourth-page .card {
+        background-color: #f3f4f6;
+        border-radius: 10px;
+        margin-top: 10px;
+        padding: 20px;
+        box-shadow: 1px 2px 3px 4px rgba(20,20,20,0.4);
+    }
+.fourth-page h1{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:3rem;
 }

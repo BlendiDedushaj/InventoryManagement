@@ -2,11 +2,11 @@
 
 namespace InventoryManagement.Controllers
 {
-    public class FeaturesController : Controller
+    public class ContactsController : Controller
     {
-        private readonly ILogger<FeaturesController> _logger;
+        private readonly ILogger<ContactsController> _logger;
 
-        public FeaturesController(ILogger<FeaturesController> logger)
+        public ContactsController(ILogger<ContactsController> logger)
         {
             _logger = logger;
         }

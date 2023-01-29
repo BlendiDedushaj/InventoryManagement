@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7PRcoai40ebVE6/WSzcAs6EeCMRjE3mR0NDfQQsRpzA=",
+  "Hash": "v+ZL1m648Om+BxYyshhYV8v+/PcnNDBwv3Roo30dYvc=",
   "Source": "InventoryManagement",
   "BasePath": "_content/InventoryManagement",
   "Mode": "Default",
@@ -1173,6 +1173,23 @@
       "OriginalItemSpec": "wwwroot\\images\\background.jpg"
     },
     {
+      "Identity": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\images\\brand.png",
+      "SourceId": "InventoryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\",
+      "BasePath": "_content/InventoryManagement",
+      "RelativePath": "images/brand.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\brand.png"
+    },
+    {
       "Identity": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\images\\cart.png",
       "SourceId": "InventoryManagement",
       "SourceType": "Discovered",
@@ -1190,6 +1207,23 @@
       "OriginalItemSpec": "wwwroot\\images\\cart.png"
     },
     {
+      "Identity": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\images\\category.png",
+      "SourceId": "InventoryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\",
+      "BasePath": "_content/InventoryManagement",
+      "RelativePath": "images/category.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\category.png"
+    },
+    {
       "Identity": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\images\\greybg.jpg",
       "SourceId": "InventoryManagement",
       "SourceType": "Discovered",
@@ -1205,6 +1239,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\greybg.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\images\\group.png",
+      "SourceId": "InventoryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\",
+      "BasePath": "_content/InventoryManagement",
+      "RelativePath": "images/group.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\group.png"
     },
     {
       "Identity": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\images\\imgbin_feature-phone-smartphone-inventory-management-software-asset-tracking-fire-department-png.png",
@@ -1324,6 +1375,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\person3.png"
+    },
+    {
+      "Identity": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\images\\producti.png",
+      "SourceId": "InventoryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\",
+      "BasePath": "_content/InventoryManagement",
+      "RelativePath": "images/producti.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\producti.png"
+    },
+    {
+      "Identity": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\images\\purchasing-icon-17.jpg",
+      "SourceId": "InventoryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\",
+      "BasePath": "_content/InventoryManagement",
+      "RelativePath": "images/purchasing-icon-17.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\purchasing-icon-17.jpg"
     },
     {
       "Identity": "C:\\Users\\artin\\Desktop\\INVENTORY\\InventoryManagement\\wwwroot\\images\\ShoppingCart.png",
