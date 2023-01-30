@@ -236,3 +236,47 @@ body {
     margin-bottom:30px;
     font-size:3rem;
 }
+
+.contact-page{
+    display:flex;
+}
+
+.contact-page img {
+    height: 600px;
+    margin-left:100px;
+}
+.displays{
+    margin:60px 80px;
+    font-size:50px;
+    text-align:center;
+}
+.contact-logo {
+    height: 120px;
+}
+
+.con-1{
+    display:flex;
+   margin-top:10px;
+   margin-bottom:10px;
+}
+.con-1 img{
+   height:30px;
+   margin-right:10px;
+}
+.second-contact{
+    text-align:center;
+}
+.logos{
+    display:flex;
+    margin-bottom:40px;
+}
+.logos h3{
+    font-size:40px;
+    margin-top:70px;
+    margin-left:20px;
+}
+.contacts{
+    margin-left:60px;
+    background-image:url(/images/greybg.jpg);
+    padding:70px;
+}
