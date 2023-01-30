@@ -150,14 +150,18 @@ namespace InventoryManagement.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser{ UserName = Input.UserName, Email = Input.Email, FirstName = Input.Firstname , LastName = Input.Lastname};
+                var existingUser = await _userManager.FindByEmailAsync(Input.Email);
+                if (existingUser != null)
+                {
+                    ModelState.AddModelError(string.Empty, "A user with this email already exists.");
+                    return Page();
+                }
 
-
+                var user = new ApplicationUser { UserName = Input.UserName, Email = Input.Email, FirstName = Input.Firstname, LastName = Input.Lastname };
                 var result = await _userManager.CreateAsync(user, Input.Password);
-                
+
                 if (result.Succeeded)
                 {
-
                     await _userManager.AddToRoleAsync(user, Input.Role);
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)

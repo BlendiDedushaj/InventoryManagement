@@ -33,12 +33,80 @@
       "PackagePath": "staticwebassets\\images\\ShoppingCart.png"
     },
     {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\Spreadsheets-amico.png",
+      "PackagePath": "staticwebassets\\images\\Spreadsheets-amico.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\Spreadsheets-pana.png",
+      "PackagePath": "staticwebassets\\images\\Spreadsheets-pana.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\address.jpg",
+      "PackagePath": "staticwebassets\\images\\address.jpg"
+    },
+    {
       "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\background.jpg",
       "PackagePath": "staticwebassets\\images\\background.jpg"
     },
     {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\brand.png",
+      "PackagePath": "staticwebassets\\images\\brand.png"
+    },
+    {
       "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\cart.png",
       "PackagePath": "staticwebassets\\images\\cart.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\category.png",
+      "PackagePath": "staticwebassets\\images\\category.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\email.png",
+      "PackagePath": "staticwebassets\\images\\email.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\greybg.jpg",
+      "PackagePath": "staticwebassets\\images\\greybg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\group.png",
+      "PackagePath": "staticwebassets\\images\\group.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\imgbin_feature-phone-smartphone-inventory-management-software-asset-tracking-fire-department-png.png",
+      "PackagePath": "staticwebassets\\images\\imgbin_feature-phone-smartphone-inventory-management-software-asset-tracking-fire-department-png.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\inventory-software.png",
+      "PackagePath": "staticwebassets\\images\\inventory-software.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\inventorymanagement_hero3x.png",
+      "PackagePath": "staticwebassets\\images\\inventorymanagement_hero3x.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\person1.png",
+      "PackagePath": "staticwebassets\\images\\person1.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\person2.png",
+      "PackagePath": "staticwebassets\\images\\person2.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\person3.png",
+      "PackagePath": "staticwebassets\\images\\person3.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\phone.png",
+      "PackagePath": "staticwebassets\\images\\phone.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\producti.png",
+      "PackagePath": "staticwebassets\\images\\producti.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\purchasing-icon-17.jpg",
+      "PackagePath": "staticwebassets\\images\\purchasing-icon-17.jpg"
     },
     {
       "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\slide1.png",
@@ -55,6 +123,14 @@
     {
       "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\slide4.png",
       "PackagePath": "staticwebassets\\images\\slide4.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\supplier.png",
+      "PackagePath": "staticwebassets\\images\\supplier.png"
+    },
+    {
+      "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\images\\warehouse-management-software.png",
+      "PackagePath": "staticwebassets\\images\\warehouse-management-software.png"
     },
     {
       "Id": "C:\\Users\\Dedushaj\\Desktop\\InventoryManagement\\InventoryManagement\\wwwroot\\js\\site.js",
