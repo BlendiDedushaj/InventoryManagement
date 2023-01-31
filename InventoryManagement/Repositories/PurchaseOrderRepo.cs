@@ -36,7 +36,9 @@ namespace InventoryManagement.Repositories
             }
             catch (Exception ex)
             {
-                _errors = "Create Failed - Sql Exception Occured , Error Info: " + ex.Message;
+                Exception innerException = ex.InnerException;
+                string innerExceptionMessage = innerException?.Message ?? "";
+                _errors = "Create Failed - Sql Exception Occured , Error Info: " + ex.Message + " Inner Exception: " + innerExceptionMessage;
             }
 
             return retVal;
@@ -44,11 +46,47 @@ namespace InventoryManagement.Repositories
 
         public bool Delete(PoHeader poHeader)
         {
-            return false;
+            bool retVal = false;
+            _errors = "";
+
+            try
+            {
+                _context.Attach(poHeader);
+                _context.Entry(poHeader).State = EntityState.Deleted;
+                _context.SaveChanges();
+                retVal = true;
+            }
+            catch (Exception ex)
+            {
+                _errors = "Delete Failed - Sql Exception Occured , Error Info : " + ex.Message;
+            }
+            return retVal;
         }
         public bool Edit(PoHeader poHeader)
         {
-            return false;
+            bool retVal = false;
+            _errors = "";
+
+            try
+            {
+
+                List<PoDetail> poDetails = _context.PoDetails.Where(d => d.PoId == poHeader.Id).ToList();
+                _context.PoDetails.RemoveRange(poDetails);
+                _context.SaveChanges();
+
+                _context.Attach(poHeader);
+                _context.Entry(poHeader).State = EntityState.Modified;
+                _context.PoDetails.AddRange(poHeader.PoDetails);
+                _context.SaveChanges();
+
+
+                retVal = true;
+            }
+            catch (Exception ex)
+            {
+                _errors = "Update Failed - Sql Exception Occured , Error Info : " + ex.Message;
+            }
+            return retVal;
         }
 
 
@@ -112,9 +150,17 @@ namespace InventoryManagement.Repositories
         public PoHeader GetItem(int Id)
         {
             PoHeader item = _context.PoHeaders.Where(i => i.Id == Id)
-                .Include(d => d.PoDetails)
-                .FirstOrDefault();
-                return item;
+                     .Include(d => d.PoDetails)
+                     .ThenInclude(i => i.Product)
+                     .ThenInclude(u => u.Units)
+                     .FirstOrDefault();
+
+
+            item.PoDetails.ForEach(i => i.UnitName = i.Product.Units.Name);
+            item.PoDetails.ForEach(p => p.Description = p.Product.Description);
+            item.PoDetails.ForEach(p => p.Total = p.Quantity * p.PrcInBaseCur);
+
+            return item;
         }
 
 
@@ -160,19 +206,25 @@ namespace InventoryManagement.Repositories
 
         public string GetNewPONumber()
         {
+
             string ponumber = "";
             var LastPoNumber = _context.PoHeaders.Max(cd => cd.PoNumber);
 
             if (LastPoNumber == null)
-                ponumber = "P000001";
+                ponumber = "PO00001";
             else
             {
                 int lastdigit = 1;
                 int.TryParse(LastPoNumber.Substring(2, 5).ToString(), out lastdigit);
 
+
                 ponumber = "PO" + (lastdigit + 1).ToString().PadLeft(5, '0');
             }
+
+
             return ponumber;
+
+
         }
     }
 }

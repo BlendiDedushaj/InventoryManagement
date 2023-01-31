@@ -1,12 +1,12 @@
 ﻿@model IEnumerable<InventoryManagement.Models.PoHeader>
 
+
 @{
-    ViewData["Title"] = "Index";
-
+    ViewData["Title"] = "Purchase Orders Listing";
     SortModel sortModel = (SortModel)ViewData["sortModel"];
-
     PagerModel pager = ViewBag.Pager;
 }
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 
 
@@ -21,7 +21,11 @@
     </div>
 </div>
 
+
+
+
 <br />
+
 
 <div class="row">
     <div class="col-12">
@@ -29,27 +33,31 @@
     </div>
 </div>
 
+
 <table class="table">
     <thead>
         <tr>
+
+
             <th>
                 <i class="@sortModel.GetColumn("PoNumber").SortIcon" arial-hidden="true"></i>
-
                 <a asp-action="Index" asp-route-sortExpression="@sortModel.GetColumn("PoNumber").SortExpression">
                     P.No
                 </a>
             </th>
+
             <th>
-
                 <i class="@sortModel.GetColumn("PoDate").SortIcon" arial-hidden="true"></i>
-
                 <a asp-action="Index" asp-route-sortExpression="@sortModel.GetColumn("PoDate").SortExpression">
                     @Html.DisplayNameFor(model => model.PoDate)
                 </a>
             </th>
+
+
             <th>
                 @Html.DisplayNameFor(model => model.Supplier)
             </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.POCurrency)
             </th>
@@ -65,6 +73,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.QuotationDate)
             </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.Remarks)
             </th>
@@ -72,59 +81,64 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.PoNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PoDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Supplier.Code)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.POCurrency.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExchangeRate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiscountPercent)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QuotationNo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QuotationDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Remarks)
-            </td>
-            <td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PoNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PoDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Supplier.Code)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.POCurrency.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExchangeRate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiscountPercent)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuotationNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuotationDate)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Remarks)
+                </td>
+                <td>
+
                     <div class="btn-group">
                         <a asp-action="Edit" asp-route-id="@item.Id">
                             <span class="btn btn-sm btn-outline-primary">
                                 <i class="fa fa-edit" aria-hidden="true"></i>
                             </span>
                         </a>
-
                         <a asp-action="Details" asp-route-id="@item.Id">
                             <span class="btn btn-sm btn-outline-dark">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </span>
                         </a>
-
                         <a asp-action="Delete" asp-route-id="@item.Id">
                             <span class="btn btn-sm btn-outline-danger">
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                             </span>
                         </a>
-
                     </div>
-            </td>
-        </tr>
-}
+
+
+
+
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
 
@@ -134,9 +148,9 @@
     </div>
 </div>
 
+
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
-
 }

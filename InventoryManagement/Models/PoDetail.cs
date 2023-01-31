@@ -26,13 +26,13 @@ namespace InventoryManagement.Models
         public decimal Quantity { get; set; }
 
 
-        [Range(1, 10000000, ErrorMessage = "FOB should be greater than 0")]
+        [Range(0.001, 10000000, ErrorMessage = "FOB should be greater than 0")]
         [DisplayFormat(DataFormatString = "{0:0.000}", ApplyFormatInEditMode = true)]
         [Column(TypeName = "smallmoney")]
         [Required]
         public decimal Fob { get; set; }
 
-        [Range(1, 10000000, ErrorMessage = "Price should be greater than 0")]
+        [Range(0.001, 10000000, ErrorMessage = "Price should be greater than 0")]
         [DisplayFormat(DataFormatString = "{0:0.000}", ApplyFormatInEditMode = true)]
         [Column(TypeName = "smallmoney")]
         [Required]
