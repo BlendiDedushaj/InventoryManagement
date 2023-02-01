@@ -104,7 +104,7 @@ namespace InventoryManagement.Controllers
             return View(item);
         }
 
-   
+        [HttpPost]
         public IActionResult Edit(Brand item)
         {
             bool bolret = false;
