@@ -1,4 +1,5 @@
 ﻿using InventoryManagement.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -26,6 +27,16 @@ namespace InventoryManagement.Data
         public virtual DbSet<ProductProfile> ProductProfiles { get; set; }
 
         public virtual DbSet<ApplicationUser> ApplicationUser { get; set; }
-       
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<IdentityUser>()
+                .ToTable("AspNetUsers")
+                .HasDiscriminator<string>("Discriminator")
+                .HasValue<IdentityUser>("IdentityUser");
+        }
+
     }
 }

@@ -30,6 +30,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>()
     .AddDefaultTokenProviders().AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<InventoryContext>();
 
+builder.Services.AddScoped<UserManager<IdentityUser>>();
+
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
