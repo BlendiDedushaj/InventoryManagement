@@ -5,6 +5,13 @@
     ViewBag.Title = "All Users";
 }
 
+@if (ViewBag.Message != null)
+{
+    <script>
+        alert("@ViewBag.Message");
+    </script>
+}
+
 <h1>All Users</h1>
 
 @if (Model.Any())
@@ -17,10 +24,12 @@
             </div>
             <div class="card-body">
                 <h5 class="card-title">@user.UserName</h5>
+                <h5 class="card-title">@user.Email</h5>
+               
             </div>
             <div class="card-footer">
-                <a href="#" class="btn btn-danger">Edit</a>
-                <a href="#" class="btn btn-danger">Delete</a>
+                <a href="@Url.Action("EditUser", new { id = user.Id })" class="btn btn-danger">Edit</a>
+                <a asp-action="Delete" asp-route-id="@user.Id" class="btn btn-danger">Delete</a>
             </div>
         </div>
     }

@@ -23,6 +23,59 @@ namespace InventoryManagement.Controllers
             return View(users);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> EditUser(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return View(user);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditUser(IdentityUser user)
+        {
+            var userToUpdate = await _userManager.FindByIdAsync(user.Id);
+            if (userToUpdate == null)
+            {
+                return NotFound();
+            }
+
+            userToUpdate.Email = user.Email;
+            userToUpdate.UserName = user.UserName;
+            userToUpdate.Id = user.Id;
+
+            var result = await _userManager.UpdateAsync(userToUpdate);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("ListUsers");
+            }
+
+            return View(user);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var result = await _userManager.DeleteAsync(user);
+            if (result.Succeeded)
+            {
+                ViewBag.Message = "User has been deleted successfully.";
+                return RedirectToAction(nameof(ListUsers));
+            }
+
+            return BadRequest();
+        }
+
         //List all the roles
         public IActionResult Index()
         {
