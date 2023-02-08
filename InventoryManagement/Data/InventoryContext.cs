@@ -1,4 +1,5 @@
-﻿using InventoryManagement.Models;
+﻿using InventoryManagement.Areas.Admin.Models;
+using InventoryManagement.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;

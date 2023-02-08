@@ -15,6 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\artin\Desktop\INVENTORY\InventoryManagement
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Admin/Views/AppRoles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBwUm9sZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Admin/Views/AppRoles/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBwUm9sZXNcRWRpdFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Admin/Views/AppRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBwUm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Admin/Views/AppRoles/ListUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQXBwUm9sZXNcTGlzdFVzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Admin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -41,22 +61,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/AppRoles/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZXNcQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/AppRoles/EditUser.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZXNcRWRpdFVzZXIuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/AppRoles/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/AppRoles/ListUsers.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZXNcTGlzdFVzZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/artin/Desktop/INVENTORY/InventoryManagement/Views/Brand/Create.cshtml]

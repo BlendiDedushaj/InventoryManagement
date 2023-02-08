@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 
-namespace InventoryManagement.Controllers
+namespace InventoryManagement.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class AppRolesController : Controller
@@ -20,7 +20,7 @@ namespace InventoryManagement.Controllers
         public IActionResult ListUsers()
         {
             var users = _userManager.Users;
-            return View(users);
+            return View("~/Areas/Admin/Views/AppRoles/ListUsers.cshtml", users);
         }
 
         [HttpGet]
@@ -32,7 +32,7 @@ namespace InventoryManagement.Controllers
                 return NotFound();
             }
 
-            return View(user);
+            return View("~/Areas/Admin/Views/AppRoles/EditUser.cshtml", user);
         }
 
         [HttpPost]
@@ -54,7 +54,7 @@ namespace InventoryManagement.Controllers
                 return RedirectToAction("ListUsers");
             }
 
-            return View(user);
+            return View("~/Areas/Admin/Views/AppRoles/EditUser.cshtml", user);
         }
 
         [HttpGet]
@@ -80,24 +80,24 @@ namespace InventoryManagement.Controllers
         public IActionResult Index()
         {
             var roles = _roleManager.Roles;
-            return View(roles);
+            return View("~/Areas/Admin/Views/AppRoles/Index.cshtml", roles);
         }
 
         [HttpGet]
         public IActionResult Create()
         {
-            return View();  
+            return View();
         }
         [HttpPost]
         public async Task<IActionResult> Create(IdentityRole model)
         {
             //avoid duplicate role
-            if(!_roleManager.RoleExistsAsync(model.Name).GetAwaiter().GetResult())
+            if (!_roleManager.RoleExistsAsync(model.Name).GetAwaiter().GetResult())
             {
                 _roleManager.CreateAsync(new IdentityRole(model.Name)).GetAwaiter().GetResult();
             }
 
-            return RedirectToAction("Index");
+            return View("~/Areas/Admin/Views/AppRoles/Create.cshtml", model);
         }
     }
 }
